@@ -38,8 +38,8 @@ install: build
 	dh_installman
 	dh_installinit --name={{package_install_name}} --no-start
 	dh_fixperms
-	chmod 0755 $(ROOTDIR)/etc/{{package_install_name}}
-	chmod -R a+rX $(ROOTDIR)/etc/{{package_install_name}}
+	#chmod 0755 $(ROOTDIR)/etc/{{package_install_name}}
+	#chmod -R a+rX $(ROOTDIR)/etc/{{package_install_name}}
 	for file in lib/env.sh lib/app_epath.sh erts-*/bin/nodetool; do \
 		if [ -f $(LIBDIR)/$$file ]; then \
 			chmod 0755 $(LIBDIR)/$$file; \
